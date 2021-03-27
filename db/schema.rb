@@ -10,16 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_27_052908) do
+ActiveRecord::Schema.define(version: 2021_03_27_173613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
     t.integer "year"
+    t.string "period"
+    t.string "original_location"
     t.string "eventname"
-    t.string "image"
-    t.string "video"
+    t.string "image1"
+    t.string "image2"
+    t.string "video1"
+    t.string "video2"
     t.string "description"
     t.string "accomplishments"
     t.string "references"
@@ -35,12 +39,16 @@ ActiveRecord::Schema.define(version: 2021_03_27_052908) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "persons", force: :cascade do |t|
+  create_table "people", force: :cascade do |t|
     t.integer "year"
+    t.string "period"
+    t.string "original_location"
     t.string "firstname"
     t.string "lastname"
-    t.string "image"
-    t.string "video"
+    t.string "image1"
+    t.string "image2"
+    t.string "video1"
+    t.string "video2"
     t.string "description"
     t.string "accomplishments"
     t.string "references"
