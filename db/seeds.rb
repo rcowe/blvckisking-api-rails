@@ -17,7 +17,7 @@ Location.create([
                   },
                 ])
 
-People.create([
+Person.create([
                 {
                   year: 1487,
                   period: "1487 - 1550",
